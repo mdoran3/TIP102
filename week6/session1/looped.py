@@ -13,7 +13,16 @@ def print_linked_list(node):
     print()
 
 def loop_length(playlist_head):
-    pass
+    slow = playlist_head
+    fast = playlist_head
+
+    while fast and fast.next:
+        if fast.next == slow:
+            return True
+        else:
+            slow = slow.next
+            fast = fast.next.next
+    return 0
 
 
 
